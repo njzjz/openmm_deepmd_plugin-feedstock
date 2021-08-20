@@ -1,0 +1,64 @@
+{% set name = "openmm_deepmd_plugin" %}
+{% set version = "2.0.0.b3" %}
+{% set dp_variant = "gpu" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
+  git_rev: v2.0.0.b2
+build:
+  number: 1
+  skip: True  # [not linux]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+    - make
+    - libgcc-ng 7
+    - libstdcxx-ng 7
+  host:
+    - python >=3  # [not ppc64le]
+    - libdeepmd {{ version }}
+    - openmm
+    - fftw
+    - numpy
+    - cython
+    - swig
+
+  run:
+    - libdeepmd >={{ version }}
+    - fftw
+    - numpy
+    - cython
+    - swig
+
+test:
+  commands:
+    - python -m simtk.testInstallation
+    - test -f $PREFIX/lib/libOpenMM.so
+    - test -f $PREFIX/lib/libOpenMMDeepmd.so
+
+about:
+  home: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
+  summary: 'OpenMM Plugin for Deepmd-kit.'
+  license: LGPL-3.0-or-later
+  license_family: LGPL
+  description: |
+    OpenMM is a toolkit for molecular simulation. It can be used either as a
+    stand-alone application for running simulations, or as a library you call
+    from your own code. It provides a combination of extreme flexibility
+    (through custom forces and integrators), openness, and high performance
+    (especially on recent GPUs) that make it truly unique among simulation
+    codes. OpenMM is MIT licensed with some LGPL portions (CUDA and OpenCL
+    platforms).
+  doc_url: http://docs.openmm.org
+  dev_url: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
+
+extra:
+  recipe-maintainers:
+    - ye-ding
