@@ -1,70 +1,66 @@
-{% set name = "lammps-dp" %}
-{% set version = "2.0.0.b4" %}
-{% set lammps = "stable_29Oct2020" %}
+{% set name = "openmm_deepmd_plugin" %}
+{% set version = "2.0.0.b3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/lammps/lammps/archive/{{ lammps }}.tar.gz
-  #sha256: 5380c1689a93d7922e3d65d9c186401d429878bb3cbe9a692580d3470d6a253f
-  patches: 
-    - deepmd.patch
-    - c6fb9c3836c127fdac0b8284020dcc48f304cfdc.diff
-    
+  ##git_url: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
+  ##git_rev: v2.0.0.b2
+  path: /home/dingye/Documents/Github/openmm_deepmd_plugin
 build:
-  number: 2
+  number: 1
   skip: True  # [not linux]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - sysroot_linux-64 2.17 # [linux64]
     - cmake
     - make
-  
+    - libgcc-ng 9
+    - libstdcxx-ng 9
   host:
     - python >=3  # [not ppc64le]
     - libdeepmd {{ version }}
-    - plumed >=2.4,<2.8
-    - mpich
-    - zlib
+    - openmm 7.5.1
     - fftw
-    - libpng
-    - jpeg
+    - numpy
+    - cython
+    - swig
 
   run:
     - libdeepmd >={{ version }}
-    - {{ pin_compatible('mpich') }}
-    - plumed >=2
     - fftw
-    - libpng
-    - jpeg
+    - openmm 7.5.1
+    - numpy
+    - cython
+    - swig
 
 test:
   commands:
-    - lmp -help
-    - test -f $PREFIX/lib/liblammps.so
-  imports:
-    - lammps
+    - python -m simtk.testInstallation
+    - test -f $PREFIX/lib/libOpenMM.so
+    - test -f $PREFIX/lib/libOpenMMDeepmd.so
 
 about:
-  home: http://lammps.sandia.gov
-  license: GPL-2.0
-  license_family: GPL
-  license_file: LICENSE
-  summary: 'LAMMPS stands for Large-scale Atomic/Molecular Massively Parallel Simulator.'
-
+  home: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
+  summary: 'OpenMM Plugin for Deepmd-kit.'
+  license: LGPL-3.0-or-later
+  license_family: LGPL
   description: |
-    LAMMPS is a classical molecular dynamics simulation code designed to
-    run efficiently on parallel computers.  It was developed at Sandia
-    National Laboratories, a US Department of Energy facility, with
-    funding from the DOE.  It is an open-source code, distributed freely
-    under the terms of the GNU Public License (GPL).
-  doc_url: http://lammps.sandia.gov/doc/Manual.html
-  dev_url: https://github.com/lammps/lammps
+    OpenMM is a toolkit for molecular simulation. It can be used either as a
+    stand-alone application for running simulations, or as a library you call
+    from your own code. It provides a combination of extreme flexibility
+    (through custom forces and integrators), openness, and high performance
+    (especially on recent GPUs) that make it truly unique among simulation
+    codes. OpenMM is MIT licensed with some LGPL portions (CUDA and OpenCL
+    platforms).
+  doc_url: http://docs.openmm.org
+  dev_url: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
 
 extra:
   recipe-maintainers:
-    - njzjz
+    - ye-ding
