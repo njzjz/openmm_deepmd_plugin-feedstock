@@ -9,7 +9,6 @@ package:
 source:
   git_url: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
   git_rev: v2.0.0.b2
-
 build:
   number: 2
   skip: True  # [not linux]
@@ -18,14 +17,14 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - sysroot_linux-64 2.17 # [linux64]
     - cmake
     - make
     - sysroot_linux-64 2.17  # [linux64]
-
   host:
     - python  # [not ppc64le]
     - libdeepmd {{ version }}
-    - openmm
+    - openmm 7.5.1
     - fftw
     - numpy
     - cython
@@ -34,6 +33,7 @@ requirements:
   run:
     - libdeepmd >={{ version }}
     - fftw
+    - openmm 7.5.1
     - numpy
     - cython
     - swig

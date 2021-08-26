@@ -20,6 +20,7 @@ jobs:
         CONFIG: linux_64_python3.9._
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: ghcr.io/deepmd-kit-recipes/linux-anvil-cuda:11.3
+
   timeoutInMinutes: 360
 
   steps:
