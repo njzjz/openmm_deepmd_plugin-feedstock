@@ -1,5 +1,19 @@
 channel_targets:
 - deepmodeling dev
 channel_sources:
-  - deepmodeling/label/dev,deepmodeling,https://deepmodeling.njzjz.win,defaults,conda-forge  # [linux64]
-  - deepmodeling/label/dev,deepmodeling,https://deepmodeling.njzjz.win,defaults,conda-forge  # [ppc64le]
+  - deepmodeling/label/dev,deepmodeling,https://deepmodeling.njzjz.win,defaults,conda-forge # [linux64]
+  - deepmodeling/label/dev,deepmodeling,https://deepmodeling.njzjz.win,defaults,conda-forge # [ppc64le]
+
+
+c_compiler_version:  # [os.environ.get("BUILD_PLATFORM", "").startswith(("linux-64", "linux-ppc64le"))]
+  - 7  # [os.environ.get("BUILD_PLATFORM") == "linux-64"]
+  - 8  # [os.environ.get("BUILD_PLATFORM") == "linux-ppc64le"]
+
+cxx_compiler_version:  # [os.environ.get("BUILD_PLATFORM", "").startswith(("linux-64", "linux-ppc64le"))]
+  - 7  # [os.environ.get("BUILD_PLATFORM") == "linux-64"]
+  - 8  # [os.environ.get("BUILD_PLATFORM") == "linux-ppc64le"]
+
+cuda_compiler_version:
+  - 10.1   # [linux-64 or win]
+  - 11.3   # [linux-64 or win or (linux and ppc64le)]
+
