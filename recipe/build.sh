@@ -2,7 +2,7 @@
 
 mkdir build
 cd build
-if [ ${float_prec} == "high" ]; then
+if [ ${float_prec}=="high" ]; then
     export PREC_DEF="-DHIGH_PREC"
 fi
 
@@ -13,4 +13,3 @@ make #-j${NUM_CPUS}
 make install
 make test
 make PythonInstall
-

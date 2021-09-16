@@ -5,11 +5,11 @@ Home: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
 
 Package license: LGPL-3.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openmm_deepmd_plugin-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/dingye18/openmm_deepmd_plugin-feedstock/blob/master/LICENSE.txt)
 
 Summary: OpenMM Plugin for Deepmd-kit.
 
-Development: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
+Development: https://github.com/JingHuangLab/openmm_deepmd_plugin
 
 Documentation: http://docs.openmm.org
 
@@ -73,28 +73,19 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-openmm_deepmd_plugin-green.svg)](https://anaconda.org/conda-forge/openmm_deepmd_plugin) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/openmm_deepmd_plugin.svg)](https://anaconda.org/conda-forge/openmm_deepmd_plugin) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/openmm_deepmd_plugin.svg)](https://anaconda.org/conda-forge/openmm_deepmd_plugin) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/openmm_deepmd_plugin.svg)](https://anaconda.org/conda-forge/openmm_deepmd_plugin) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-openmm_deepmd_plugin-green.svg)](https://anaconda.org/ye-ding/openmm_deepmd_plugin) | [![Conda Downloads](https://img.shields.io/conda/dn/ye-ding/openmm_deepmd_plugin.svg)](https://anaconda.org/ye-ding/openmm_deepmd_plugin) | [![Conda Version](https://img.shields.io/conda/vn/ye-ding/openmm_deepmd_plugin.svg)](https://anaconda.org/ye-ding/openmm_deepmd_plugin) | [![Conda Platforms](https://img.shields.io/conda/pn/ye-ding/openmm_deepmd_plugin.svg)](https://anaconda.org/ye-ding/openmm_deepmd_plugin) |
 
 Installing openmm_deepmd_plugin
 ===============================
 
-Installing `openmm_deepmd_plugin` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
-
 ```
-conda config --add channels conda-forge
-conda config --set channel_priority strict
-```
-
-Once the `conda-forge` channel has been enabled, `openmm_deepmd_plugin` can be installed with:
-
-```
-conda install openmm_deepmd_plugin
+conda install -c openmm_deepmd_plugin
 ```
 
 It is possible to list all of the versions of `openmm_deepmd_plugin` available on your platform with:
 
 ```
-conda search openmm_deepmd_plugin --channel conda-forge
+conda search openmm_deepmd_plugin --channel ye-ding
 ```
 
 
@@ -161,5 +152,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@ye-ding](https://github.com/ye-ding/)
+* [@ye-ding](https://github.com/dingye18/)
 
