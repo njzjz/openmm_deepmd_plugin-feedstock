@@ -9,7 +9,7 @@ package:
 
 source:
   git_url: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
-  git_rev: 9ba5f5268a48557d59cf976574ef514c80cf80c2
+  git_rev: 857eec25c892f3d9fa9ddd1479d1a484a67cc1d9
   patches:
     - cuda_platform.patch
 
