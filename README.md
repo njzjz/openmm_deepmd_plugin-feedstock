@@ -5,11 +5,11 @@ Home: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
 
 Package license: LGPL-3.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/dingye18/openmm_deepmd_plugin-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openmm_deepmd_plugin-feedstock/blob/master/LICENSE.txt)
 
 Summary: OpenMM Plugin for Deepmd-kit.
 
-Development: https://github.com/JingHuangLab/openmm_deepmd_plugin
+Development: https://github.com/JingHuangLab/openmm_deepmd_plugin.git
 
 Documentation: http://docs.openmm.org
 
@@ -40,24 +40,45 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_python3.7.</td>
+              <td>linux_64_dp_variantcpupython3.7.</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm_deepmd_plugin-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.7._" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm_deepmd_plugin-feedstock?branchName=master&jobName=linux&configuration=linux_64_dp_variantcpupython3.7._" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.8.</td>
+              <td>linux_64_dp_variantcpupython3.8.</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm_deepmd_plugin-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.8._" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm_deepmd_plugin-feedstock?branchName=master&jobName=linux&configuration=linux_64_dp_variantcpupython3.8._" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.9.</td>
+              <td>linux_64_dp_variantcpupython3.9.</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm_deepmd_plugin-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.9._" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm_deepmd_plugin-feedstock?branchName=master&jobName=linux&configuration=linux_64_dp_variantcpupython3.9._" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_dp_variantgpupython3.7.</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm_deepmd_plugin-feedstock?branchName=master&jobName=linux&configuration=linux_64_dp_variantgpupython3.7._" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_dp_variantgpupython3.8.</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm_deepmd_plugin-feedstock?branchName=master&jobName=linux&configuration=linux_64_dp_variantgpupython3.8._" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_dp_variantgpupython3.9.</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openmm_deepmd_plugin-feedstock?branchName=master&jobName=linux&configuration=linux_64_dp_variantgpupython3.9._" alt="variant">
                 </a>
               </td>
             </tr>
@@ -73,19 +94,28 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-openmm_deepmd_plugin-green.svg)](https://anaconda.org/ye-ding/openmm_deepmd_plugin) | [![Conda Downloads](https://img.shields.io/conda/dn/ye-ding/openmm_deepmd_plugin.svg)](https://anaconda.org/ye-ding/openmm_deepmd_plugin) | [![Conda Version](https://img.shields.io/conda/vn/ye-ding/openmm_deepmd_plugin.svg)](https://anaconda.org/ye-ding/openmm_deepmd_plugin) | [![Conda Platforms](https://img.shields.io/conda/pn/ye-ding/openmm_deepmd_plugin.svg)](https://anaconda.org/ye-ding/openmm_deepmd_plugin) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-openmm_deepmd_plugin-green.svg)](https://anaconda.org/conda-forge/openmm_deepmd_plugin) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/openmm_deepmd_plugin.svg)](https://anaconda.org/conda-forge/openmm_deepmd_plugin) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/openmm_deepmd_plugin.svg)](https://anaconda.org/conda-forge/openmm_deepmd_plugin) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/openmm_deepmd_plugin.svg)](https://anaconda.org/conda-forge/openmm_deepmd_plugin) |
 
 Installing openmm_deepmd_plugin
 ===============================
 
+Installing `openmm_deepmd_plugin` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+
 ```
-conda install -c openmm_deepmd_plugin
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+```
+
+Once the `conda-forge` channel has been enabled, `openmm_deepmd_plugin` can be installed with:
+
+```
+conda install openmm_deepmd_plugin
 ```
 
 It is possible to list all of the versions of `openmm_deepmd_plugin` available on your platform with:
 
 ```
-conda search openmm_deepmd_plugin --channel ye-ding
+conda search openmm_deepmd_plugin --channel conda-forge
 ```
 
 
@@ -152,5 +182,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@ye-ding](https://github.com/dingye18/)
+* [@ye-ding](https://github.com/ye-ding/)
 

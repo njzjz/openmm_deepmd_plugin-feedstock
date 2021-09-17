@@ -8,19 +8,30 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_python3.7._:
-        CONFIG: linux_64_python3.7._
+      linux_64_dp_variantcpupython3.7._:
+        CONFIG: linux_64_dp_variantcpupython3.7._
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: ghcr.io/deepmd-kit-recipes/linux-anvil-cuda:11.3
-      linux_64_python3.8._:
-        CONFIG: linux_64_python3.8._
+      linux_64_dp_variantcpupython3.8._:
+        CONFIG: linux_64_dp_variantcpupython3.8._
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: ghcr.io/deepmd-kit-recipes/linux-anvil-cuda:11.3
-      linux_64_python3.9._:
-        CONFIG: linux_64_python3.9._
+      linux_64_dp_variantcpupython3.9._:
+        CONFIG: linux_64_dp_variantcpupython3.9._
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: ghcr.io/deepmd-kit-recipes/linux-anvil-cuda:11.3
-
+      linux_64_dp_variantgpupython3.7._:
+        CONFIG: linux_64_dp_variantgpupython3.7._
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: ghcr.io/deepmd-kit-recipes/linux-anvil-cuda:11.3
+      linux_64_dp_variantgpupython3.8._:
+        CONFIG: linux_64_dp_variantgpupython3.8._
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: ghcr.io/deepmd-kit-recipes/linux-anvil-cuda:11.3
+      linux_64_dp_variantgpupython3.9._:
+        CONFIG: linux_64_dp_variantgpupython3.9._
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: ghcr.io/deepmd-kit-recipes/linux-anvil-cuda:11.3
   timeoutInMinutes: 360
 
   steps:

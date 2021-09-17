@@ -5,34 +5,29 @@ c_compiler_version:
 cdt_name:
 - cos7
 channel_sources:
-- deepmodeling/label/dev,deepmodeling,https://deepmodeling.njzjz.win,conda-forge,defaults
+- deepmodeling,https://deepmodeling.njzjz.win,defaults,conda-forge
 channel_targets:
-- deepmodeling dev
+- deepmodeling main
 cxx_compiler:
 - gxx
 cxx_compiler_version:
 - '7'
 docker_image:
 - ghcr.io/deepmd-kit-recipes/linux-anvil-cuda:11.3
+dp_variant:
+- cpu
 fftw:
 - '3'
-jpeg:
-- '9'
-libpng:
-- '1.6'
-mpich:
-- '3'
-openmm:
-- '7.5.1'
+numpy:
+- '1.20'
 pin_run_as_build:
   fftw:
     max_pin: x
-  jpeg:
-    max_pin: x
-  libpng:
+  python:
+    min_pin: x.x
     max_pin: x.x
-  zlib:
-    max_pin: x.x
+python:
+- 3.7.*
 target_platform:
 - linux-64
 zip_keys:
@@ -40,5 +35,5 @@ zip_keys:
   - cxx_compiler_version
 - - cdt_name
   - docker_image
-zlib:
-- '1.2'
+- - python
+  - numpy
