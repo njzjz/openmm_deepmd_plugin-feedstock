@@ -49,8 +49,6 @@ requirements:
     - fftw
     - openmm 7.6
     - numpy
-    - cython
-    - swig
 
 test:
   commands:
