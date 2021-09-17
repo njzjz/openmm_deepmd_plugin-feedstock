@@ -43,7 +43,6 @@ requirements:
     - fftw
     - openmm 7.6
     - numpy
-    - swig
 
 test:
   commands:
